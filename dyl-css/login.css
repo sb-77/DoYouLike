@@ -1,0 +1,99 @@
+
+
+/* ============================================= */
+ /* 부모 컨테이너 */
+ .profile-container2 {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px; */
+
+    text-align: center; /* 컨테이너 안의 내용 가운데 정렬 */
+    margin-top: 100px;
+     margin-left: 50px;
+     margin-right: 50px;
+
+   
+  }
+  
+  /* 프로필 사진 */
+  .profile-picture3 {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 닉네임 레이블 */
+  .profile-label2 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+
+    margin-bottom: 30px;
+  }
+
+  .profname{
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    
+ }
+
+ .profile-field{
+    margin-bottom: 30px;
+    width: 100%;
+ }
+
+ #major {
+    width: 100%;
+ }
+
+
+
+ .btnlog {
+    display: inline-block; /* a 태그를 블록 레벨 요소로 변환 */
+    width: 100%;
+    height: 5rem;
+    background-color:rgb(177, 206, 188);
+    margin-top: 50px;
+
+}
+
+.loga {
+    width: 70%;
+    align-items: center;
+}
+
+.image-with-text {
+    position: relative; /* 상대 위치 지정 */
+  }
+  
+  .green {
+    position: absolute; /* 절대 위치 지정 */
+    bottom: 0; /* 아래쪽에 위치 */
+    left: 50%; /* 가운데 정렬 */
+    transform: translateX(-50%); /* 가운데 정렬 조정 */
+    
+    color: white; /* 글자색 */
+    padding: 5px 10px; /* 내부 간격 */
+   
+    font-size: 30px;
+    font-weight: bold; /* 볼드체 설정 */
+    font-family: 'Comic Neue', cursive; /* 'Amatic SC' 폰트를 적용 */
+  }
+  
+  .logcolor {
+    background-color: rgb(143, 190, 143);
+    display: inline-block;
+    padding: 10px 20px; /* 내부 간격 설정 */
+    border-radius: 5px; /* 테두리 둥글게 */
+    margin-top: 10px;
+  }

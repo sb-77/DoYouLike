@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DoYouLike</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="../dyl-css/style.css">
+
+  <link rel="stylesheet" href="../dyl-css/user-profile.css">
+  <link rel="stylesheet" href="../dyl-css/msg3.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/varkala/1-2/img/favicon.png">
+  <!-- 로고 폰트적용 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
+</head>
+
+<body>
+  <!--Top Appbar-->
+  <div id="appbar" class="p-1">
+
+    <!-- 상단바 로고 -->
+    <div class="image-with-text2">
+      <label class="green2">DoYouLike</label>
+      <img src="https://cdn.pixabay.com/photo/2016/01/18/22/19/twins-1147613_640.png" alt="Logo" class="logo">
+    </div>
+    <!-- 상단바 로고 -->
+
+
+    <!-- 홈 아이콘 -->
+    <li class="nav-item">
+      <a class="" href="index.html">
+        <h3><i class="bi bi-people-fill"></i></h3>
+        <h6 class="label">홈</h6>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="" href="message.html">
+        <h3><i class="bi bi-envelope-fill"></i></h3>
+        <h6 class="label">쪽지</h6>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class=" active" href="user-profile.html">
+        <h3><i class="bi bi-person-plus-fill"></i></h3>
+        <h6 class="label">회원정보</h6>
+      </a>
+    </li>
+
+    </button>
+
+
+
+
+    <!-- 상단바 점3개 버튼 시작-->
+    <div class="dropdown">
+      <button class="dropdown-button">&#8942;</button>
+      <div class="dropdown-content">
+        <div class="button-group">
+          <div class="logoutbtn-txtsize">
+            <img src="https://cdn.pixabay.com/photo/2022/01/11/19/43/avocado-6931344_1280.jpg" alt="User Photo"
+              class="user3-photo">
+            <label for="logout-button" style="color: rgb(6, 6, 6);">아보카도님 안녕하세요.</label>
+          </div>
+          <a href="login.html" class="logout-button">로그아웃</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- 상단바 점3개 버튼 끝-->
+
+  <div class="d-flex">
+    <!-- Test Content -->
+    <main id="main" class="">
+      <section class="p-0 p-lg-5">
+        <div class="container-fluid">
+          <!-- ... (기존 Test Content 내용) ... -->
+
+
+
+
+
+
+
+
+          <div class="profile-container2">
+            <img class="profile-picture2" src="https://cdn.pixabay.com/photo/2022/01/11/19/43/avocado-6931344_640.jpg">
+            <div class="profile-label2">아보카도</div>
+
+
+
+            <div class="profile-field">
+              <div class="profname">이름</div>
+              <input type="text" id="inputtxt" placeholder="이름을 입력해주세요.">
+            </div>
+
+            <div class="profile-field">
+              <div class="profname">나이</div>
+              <input type="number" id="inputtxt" placeholder="나이를 입력해주세요." value="20" min="20">
+            </div>
+
+            <div class="profile-field">
+              <div class="profname">학과</div>
+              <select id="major" name="department">
+                <option value="computer-science">컴퓨터공학</option>
+                <option value="electrical-engineering">인공지능</option>
+                <option value="mechanical-engineering">아트앤디자인</option>
+                <!-- 추가적인 학과 옵션들 -->
+              </select>
+            </div>
+
+            <div class="profile-field">
+              <div class="profname">흡연여부</div>
+              <input type="checkbox" id="smoking" name="smoking" value="yes">
+              <label for="smoking">예</label>
+              <input type="checkbox" id="smoking" name="smoking" value="no">
+              <label for="smoking">아니오</label>
+            </div>
+
+            <div class="profile-field">
+              <div class="profname">방에 있는 시간</div>
+              <input type="checkbox" id="smoking" name="smoking" value="yes">
+              <label for="smoking">길다</label>
+              <input type="checkbox" id="smoking" name="smoking" value="no">
+              <label for="smoking">짧다</label>
+            </div>
+
+
+
+            <a href="index.html" class="usera"><button class="btnmsg">저장하기</button></a>
+            <a href="unregister.html" class="usera"><button class="btnmsg">회원탈퇴 하기</button></a>
+          </div>
+
+
+
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- 외부 스크립트 파일 -->
+  <script src="../script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

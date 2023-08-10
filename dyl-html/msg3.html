@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DoYouLike</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="../dyl-css/style.css">
+
+  <link rel="stylesheet" href="../dyl-css/message.css">
+  <link rel="stylesheet" href="../dyl-css/msg3.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/varkala/1-2/img/favicon.png">
+  <!-- 로고 폰트적용 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
+</head>
+
+<body>
+  <!--Top Appbar-->
+  <div id="appbar" class="p-1">
+
+    <!-- 상단 바에 뒤로 가기 버튼 -->
+    <a href="msg2.html">
+      <div id="backButton">🡰</div>
+    </a>
+    <a href="index.html"><!-- 상단바 로고 -->
+      <div class="image-with-text2">
+        <label class="green2">DoYouLike</label>
+        <img src="https://cdn.pixabay.com/photo/2016/01/18/22/19/twins-1147613_640.png" alt="Logo" class="logo">
+      </div>
+      <!-- 상단바 로고 -->
+    </a>
+
+
+
+    <!-- 상단바 점3개 버튼 시작-->
+    <div class="dropdown">
+      <button class="dropdown-button">&#8942;</button>
+      <div class="dropdown-content">
+        <div class="button-group">
+          <button class="block-button" onclick="showPopup('blockPopup')">유저 차단</button>
+          <button class="report-button" onclick="showPopup('reportPopup')">신고</button>
+          <a href="login.html" class="logout-button">로그아웃</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 차단 팝업 -->
+    <div class="popup" id="blockPopup">
+      <div class="popup-content">
+        <h2>유저 차단</h2>
+        <form id="blockForm">
+          <label for="blockReason">차단 사유:</label>
+          <textarea id="blockReason" name="blockReason" rows="4" cols="50" required></textarea>
+        </form>
+        <div class="popup-buttons">
+          <button type="submit" class="submit-button">차단 하기</button>
+          <button onclick="hidePopup('blockPopup')">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 신고 팝업 -->
+    <div class="popup" id="reportPopup">
+      <div class="popup-content">
+        <h2>신고</h2>
+        <form id="reportForm">
+          <label for="reportReason">신고 사유:</label>
+          <textarea id="reportReason" name="reportReason" rows="4" cols="50" required></textarea>
+        </form>
+
+        <div class="popup-buttons">
+          <button type="submit" class="submit-button">신고 하기</button>
+          <button onclick="hidePopup('reportPopup')">닫기</button>
+        </div>
+      </div>
+    </div>
+    <!-- 상단바 점3개 버튼 끝-->
+  </div>
+
+  <div class="d-flex">
+    <!-- Test Content -->
+    <main id="main" class="">
+      <section class="p-0 p-lg-5">
+        <div class="container-fluid">
+          <!-- ... (기존 Test Content 내용) ... -->
+
+          <div class="page-title">채팅 상세</div>
+
+
+
+          <div class="profile-container3">
+            <div class="chat-container">
+
+
+              <div class="message other-message">
+                <div class="image-with-text-msg3">
+                  <img src="https://cdn.pixabay.com/photo/2020/11/22/14/58/earth-5766860_640.png" alt="Friend Photo"
+                    class="user2-photo">
+                  <div class="user2-name">지구님
+                  </div>
+                </div>
+
+                <div class="message-bubble">
+                  안녕하세요. 룸메 구하셨나요?
+                </div>
+
+
+              </div>
+
+              <div class="message">
+                <div class="image-with-text-msg3">
+                  <img src="https://cdn.pixabay.com/photo/2022/01/11/19/43/avocado-6931344_1280.jpg" alt="User Photo"
+                    class="user1-photo">
+                  <div class="user1-name">아보카도님
+                  </div>
+                </div>
+
+                <div class="message-bubble">
+                  아직 구하고 있습니다!
+                </div>
+              </div>
+              <!-- 이런식으로 메세지 내용보여주기 -->
+
+              <div class="chat-container">
+                <div class="messages" id="messages">
+                  <!-- 메시지들이 표시될 공간 -->
+                </div>
+                <div class="input-container">
+                  <input type="text" id="messageInput" placeholder="메시지를 입력하세요">
+                  <button id="sendButton">전송</button>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+
+<!-- 내부 스크립트========================== -->
+<script>
+  // 팝업창용 스크립트 시작!
+  function showPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.classList.add("active");
+  }
+
+  function hidePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.classList.remove("active");
+  }
+  // 팝업창용 스크립트 끝-
+  //---------------------------------------------------------
+
+  // 여기는 채팅창용 스크립트 시작!
+  document.addEventListener("DOMContentLoaded", function () {
+    const messages = document.getElementById("messages");
+    const messageInput = document.getElementById("messageInput");
+    const sendButton = document.getElementById("sendButton");
+
+    sendButton.addEventListener("click", function () {
+      const messageText = messageInput.value.trim();
+      if (messageText !== "") {
+        const messageDiv = document.createElement("div");
+        messageDiv.classList.add("message", "user-message"); // 추가된 클래스
+        messageDiv.textContent = messageText;
+        messages.appendChild(messageDiv);
+        messageInput.value = "";
+        messages.scrollTop = messages.scrollHeight; // 스크롤을 아래로 이동
+      }
+    });
+
+    // 엔터 키로 메시지 전송
+    messageInput.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        sendButton.click();
+        event.preventDefault(); // 폼 제출 방지
+      }
+    });
+  });
+  // 여기는 채팅창용 스크립트 끝-
+
+
+</script>
+
+<!-- 외부 스크립트 파일 -->
+<script src="../script.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

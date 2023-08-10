@@ -1,0 +1,54 @@
+.gray-box {
+    margin-top: 50px;
+    position: relative; /* 상대 위치 설정 */
+  }
+  
+  .member-image-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px; /* 이미지와 날짜 사이에 간격 주기 */
+   
+  }
+  
+  .member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  
+  .message-time {
+    position: absolute; /* 절대 위치 설정 */
+    right: 0; /* 오른쪽 위치 */
+    padding: 15px;
+    border-top-left-radius: 5px;
+    
+  }
+
+  
+  
+  /* 위쪽 글씨 스타일링 */
+.top-text2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px; /* 위쪽과 아래쪽 글씨 사이의 간격 설정 */
+  }
+  /* 아래쪽 글씨 스타일링 */
+  .bottom-text2 {
+    font-size: 12px;
+  }
+
+  .gray-box2 {
+    display: flex;
+    align-items: center; /* 이미지와 날짜를 세로 중앙으로 정렬 */
+  }
+  
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  

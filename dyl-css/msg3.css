@@ -1,0 +1,291 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  } */
+  .chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .user1-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* margin-right: 10px; */
+  }
+  .user2-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+  
+  .message-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #8ac5c2;
+    color: #fff;
+  }
+  .other-message {
+    flex-direction: row-reverse;
+  }
+
+  .user1-name {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    /* margin-right: 12px; */
+    align-items: center;
+  }
+
+  .user2-name {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    margin-left: 15px;
+    
+  }
+
+  .image-with-text-msg3 {
+    position: relative; /* 상대 위치 지정 */
+  }
+
+  .profile-container3 {
+  
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+
+  /* =============================================================================== */
+  /* 팝업창 부분 */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .button-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+  }
+  .report-button,
+  .block-button,
+  .logout-button {
+    border: none;
+    background-color: #ccc;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .popup.active {
+    display: flex;
+  }
+
+  /* 차단 사유 입력 필드 스타일 */
+#blockReason, #reportReason {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  /* 차단하기 버튼 스타일 */
+ 
+
+  
+  .submit-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* 팝업창 내부 버튼 스타일 */
+  .popup button {
+    background-color: #ccc;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .popup button:hover {
+    background-color: #aaa;
+  }
+
+
+
+/* 차단 사유 입력 필드와 버튼들을 가로로 나열 */
+
+.popup-buttons {
+  /* 필요한 스타일 추가 */
+  display: flex;
+  gap: 10px; /* 버튼 사이의 간격 조정 */
+  justify-content: center;
+}
+
+
+.block-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+
+  
+  .block-button:hover, .submit-button:hover, .close-button:hover, .report-button:hover {
+    background-color: #d32f2f;
+  }
+  .logout-button:hover {
+    background-color: #59d77f;
+  }
+
+
+
+
+  .dropdown-button {
+    background-color: transparent;
+    border: .08em solid var(--AlmostBlack);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    
+    /*Center icon*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Use to center icon*/
+    
+    /*padding: .15rem;*/
+    
+    /*Button Size*/
+    height: 3rem;
+    width: 3rem;
+    
+    z-index: 9999;
+  }
+
+  /* .dropdown-button 클래스에 스타일 적용 */
+.dropdown-button {
+  color: white; /* 버튼 글자 색상 */
+  font-weight: bold; /* 글자 굵기 */
+  font-size: 28px; /* 글자 크기 */
+  border: none; /* 버튼 테두리 제거 */
+  background-color: transparent; /* 배경색 제거 */
+  cursor: pointer; /* 커서를 손가락 모양으로 변경 */
+}
+  
+  .dropdown-content {
+    /* 드롭다운 박스가 뷰포트 내에서 유지되도록 조정 */
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 100%; /* 드롭다운 메뉴가 상단 바 아래로 위치하도록 설정 */
+    /* 추가 스타일 */
+  }
+
+  #dropdown-menu {
+    /* 기존 스타일 유지 */
+    position: absolute;
+    right: 0;
+    top: 100%; /* 드롭다운 메뉴가 상단 바 아래로 위치하도록 설정 */
+    /* 추가 스타일 */
+  }
+
+
+
+  /* 특정 요소에 스타일을 적용하여 글씨 색상 변경 */
+#blockForm label, #reportForm {
+    color: black; /* 원하는 색상으로 변경 */
+  }
+
+h2 {
+  color: black; /* 원하는 색상으로 변경 */
+}
+
+/* 채팅창 부분 시작 */
+/* 메시지 입력창과 버튼 스타일 */
+.input-container {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+
+#messageInput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#sendButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+/* 채팅창 부분 끝 */
+
+/* 탈퇴창 */
+.unregister-txt {
+/* 타이틀 스타일 */
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  padding: 20px;
+  margin-top: 25%;
+
+}

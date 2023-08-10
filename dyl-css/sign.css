@@ -1,0 +1,55 @@
+/* sign css */
+
+/* ============================================= */
+ /* 부모 컨테이너 */
+ .profile-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+
+
+   
+  }
+  
+  /* 프로필 사진 */
+  .profile-picture2 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    margin-top: 50px;
+  }
+  
+  /* 닉네임 레이블 */
+  .profile-label2 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+
+    margin-bottom: 30px;
+  }
+
+  .profname{
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    
+ }
+
+ .profile-field{
+    margin-bottom: 30px;
+    width: 100%;
+ }
+
+ #major {
+    width: 100%;
+ }
