@@ -9,15 +9,25 @@
   <link rel="stylesheet" href="../dyl-css/style.css">
 
   <link rel="stylesheet" href="../dyl-css/msg3.css">
+  <link rel="stylesheet" href="../dyl-css/search.css">
   <!-- Favicon-->
   <link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/varkala/1-2/img/favicon.png">
   <!-- 로고 폰트적용 -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
 
+  <style>
+
+    .dropdowngr {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 두 개의 열을 생성 */
+      gap: 20px; /* 열 사이의 간격 설정 */
+    }
+  </style>
 
 </head>
 
 <body>
+
   <!--Top Appbar-->
   <div id="appbar" class="p-1">
 
@@ -46,15 +56,33 @@
         <h6 class="label">회원정보</h6>
       </a>
     </li>
-
     <!-- </button> -->
 
 
 
 
 
-    <!-- 상단바 점3개 버튼 시작-->
-    <div class="dropdown">
+
+  <!-- 상단바 점3개 버튼 시작-->
+    <div class="dropdowngr">
+
+      <div class="dropdown2">
+        <!--    검색 팝업창 시작      -->
+        <button class="dropdown-button" id="customSearchBtn"><span class="icon"><i class="fas fa-search"></i></span></button>
+        <div class="custom-popup-bg" id="customPopupBg">
+          <div class="custom-popup-content" id="customPopupContent">
+            <button class="custom-closeBtn" id="customCloseBtn"><i class="fas fa-times"></i></button>
+            <div class="custom-search-container">
+              <input type="text" id="customSearchInput" placeholder="찾고 싶은 내용을 입력하세요.">
+              <button class="custom-search-btn" id="customSearchSubmit"><i class="fas fa-search"></i> 검색</button>
+            </div>
+            <!-- 팝업 내용과 사용자 검색하기 버튼을 추가하세요 -->
+          </div>
+        </div>
+        <!--    검색 팝업창 끝      -->
+      </div>
+
+      <div class="dropdown">
       <button class="dropdown-button">&#8942;</button>
       <div class="dropdown-content">
         <div class="button-group">
@@ -68,7 +96,7 @@
       </div>
     </div>
 
-
+  </div>
   </div>
   </div>
   <!-- 상단바 점3개 버튼 끝-->
@@ -80,6 +108,8 @@
       <section class="p-0 p-lg-5">
         <div class="container-fluid">
           <!-- ... (기존 Test Content 내용) ... -->
+
+
 
           <a href="board.html"><button class="btntxt">모집글 작성</button></a>
 
@@ -129,4 +159,6 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 </body>

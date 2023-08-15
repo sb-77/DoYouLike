@@ -143,51 +143,7 @@
 </body>
 
 
-<!-- 내부 스크립트========================== -->
-<script>
-  // 팝업창용 스크립트 시작!
-  function showPopup(popupId) {
-    const popup = document.getElementById(popupId);
-    popup.classList.add("active");
-  }
 
-  function hidePopup(popupId) {
-    const popup = document.getElementById(popupId);
-    popup.classList.remove("active");
-  }
-  // 팝업창용 스크립트 끝-
-  //---------------------------------------------------------
-
-  // 여기는 채팅창용 스크립트 시작!
-  document.addEventListener("DOMContentLoaded", function () {
-    const messages = document.getElementById("messages");
-    const messageInput = document.getElementById("messageInput");
-    const sendButton = document.getElementById("sendButton");
-
-    sendButton.addEventListener("click", function () {
-      const messageText = messageInput.value.trim();
-      if (messageText !== "") {
-        const messageDiv = document.createElement("div");
-        messageDiv.classList.add("message", "user-message"); // 추가된 클래스
-        messageDiv.textContent = messageText;
-        messages.appendChild(messageDiv);
-        messageInput.value = "";
-        messages.scrollTop = messages.scrollHeight; // 스크롤을 아래로 이동
-      }
-    });
-
-    // 엔터 키로 메시지 전송
-    messageInput.addEventListener("keypress", function (event) {
-      if (event.key === "Enter") {
-        sendButton.click();
-        event.preventDefault(); // 폼 제출 방지
-      }
-    });
-  });
-  // 여기는 채팅창용 스크립트 끝-
-
-
-</script>
 
 <!-- 외부 스크립트 파일 -->
 <script src="../script.js"></script>
